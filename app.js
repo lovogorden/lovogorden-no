@@ -19,6 +19,8 @@
 const express = require('express');
 const app = express();
 
+app.use('/', express.static('static'))
+
 app.get('/', (req, res) => {
   res.status(200).send('Dette er Neil!');
 });

@@ -15,11 +15,7 @@
 runtime: nodejs
 env: flex
 
-handlers:
 
-- url: /(.*\.(gif|png|jpg))$
-  static_files: static/\1
-  upload: static/.*\.(gif|png|jpg)$
 
 
 
