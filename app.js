@@ -21,13 +21,19 @@ const app = express();
 
 app.use('/', express.static('static'))
 
-app.get('/*', function(req, res, next) {
-  if (req.headers.host.match(/^www/) !== null ) {
-    res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
-  } else {
-    next();
-  }
+// set up a route to redirect http to https
+http.get('*',function(req,res){
+    res.redirect('https://lovogorden.no'+req.url)
 })
+
+
+// app.get('/*', function(req, res, next) {
+//   if (req.headers.host.match(/^www/) !== null ) {
+//     res.redirect('https://' + req.headers.host.replace(/^www\./, '') + req.url);
+//   } else {
+//     next();
+//   }
+// })
 
 app.get('/', (req, res) => {
   res.status(200).send('Dette er Neil!');
