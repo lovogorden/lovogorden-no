@@ -22,9 +22,9 @@ const app = express();
 app.use('/', express.static('static'))
 
 // set up a route to redirect http to https
-http.get('*',function(req,res){
-    res.redirect('https://lovogorden.no'+req.url)
-})
+// http.get('*',function(req,res){
+//     res.redirect('https://lovogorden.no'+req.url)
+// })
 
 
 // app.get('/*', function(req, res, next) {
