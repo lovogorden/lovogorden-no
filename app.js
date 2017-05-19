@@ -56,6 +56,7 @@ app.use (function (req, res, next) {
     }
   } else { //If not https -> redirect and remove www
     res.redirect('https://' + req.headers.host.replace(/^www\./, '') + req.url);
+    //next();
   }
 });
 /////////////// COMMENT OUT FOR DEBUG - END  ///////////////
