@@ -4,5 +4,9 @@ This sample demonstrates a tiny Hello World Node.js app for [Google App Engine F
 
 ## Running locally
 
-Refer to the [appengine/README.md](../README.md) file for instructions on
-running and deploying.
+
+## Deploy
+gcloud auth login
+gcloud projects list
+gcloud config set project lovogorden-no
+gcloud app deploy

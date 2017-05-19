@@ -1,0 +1,30 @@
+//Redirects (in use clause)
+app.use (function (req, res, next) {
+  var schema = (req.headers['x-forwarded-proto'] || '').toLowerCase();
+
+  //If not https -> redirect
+  if (schema === 'https') {
+    next();
+  } else {
+    res.redirect('https://' + req.headers.host + req.url);
+    //res.redirect('https://lovogorden.no';
+  }
+
+  //If www first -> redirect
+  if (req.headers.host.match(/^www/) !== null ) {
+    //res.redirect('https://lovogorden.no');
+    res.redirect('https://' + req.headers.host.replace(/^www\./, '') + req.url);
+  } else {
+    next();
+  }
+
+});
+
+//If www first -> redirect (in get clause)
+// app.get('/*', function(req, res, next) {
+//   if (req.headers.host.match(/^www/) !== null ) {
+//     res.redirect('https://lovogorden.no');
+//   } else {
+//     next();
+//   }
+// })

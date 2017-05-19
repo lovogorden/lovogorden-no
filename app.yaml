@@ -16,7 +16,8 @@ runtime: nodejs
 env: flex
 
 
-
+#- url: "*/static/favicon.ico"
+#    module: default
 
 
 

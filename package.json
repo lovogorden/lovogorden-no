@@ -12,6 +12,9 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "4.14.0"
+    "body-parser": "^1.16.1",
+    "express": "4.14.0",
+    "nodemailer": "^3.0.2",
+    "serve-favicon": "^2.4.0"
   }
 }
