@@ -6,7 +6,8 @@ This sample demonstrates a tiny Hello World Node.js app for [Google App Engine F
 
 
 ## Deploy
-gcloud auth login
 gcloud projects list
+
+gcloud auth login
 gcloud config set project lovogorden-no
 gcloud app deploy
