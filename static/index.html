@@ -214,7 +214,7 @@
                             <div class="overflow-hidden">
                                 <h4>Sikkerhet</h4>
                                 <p>
-                                    Se etter Lov og orden AS - GreenBar SSL og opprett 2-faktor autentisering om du ønsker.
+                                    2-faktor autentisering ihht GDPR.
                                 </p>
                             </div>
                         </div>
@@ -225,7 +225,7 @@
                             <div class="overflow-hidden">
                                 <h4>Datalagring</h4>
                                 <p>
-                                    Data blir lagret hos Google i Nederland.
+                                    Data blir lagret i Norge.
                                 </p>
                             </div>
                         </div>
@@ -320,7 +320,7 @@
           							<h4>Drive</h4>
           							<div class="borderline"></div>
                         <br/>
-          							<p class="price">250<span>NOK/MND</span></p>
+          							<p class="price">500<span>NOK/MND</span></p>
           							<ul class="price-details">
           								<li>Dokumenthåndtering</li>
           							</ul>
@@ -332,9 +332,9 @@
                         <h4>Support</h4>
                         <div class="borderline"></div>
                         <br/>
-                        <p class="price">250<span>NOK/MND</span></p>
+                        <p class="price">850<span>NOK/TIME</span></p>
                         <ul class="price-details">
-                          <li>Alltid tilgjenngelig bistand</li>
+                          <li>Via fjernhjelp. På-stedet-support tilkommer reise.</li>
                         </ul>
                       </div>
                   </div>
@@ -363,22 +363,22 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-sm-3 margin-b-20 text-center">
+                    <div class="col-sm-4 margin-b-20 text-center">
                         <span><i> <img style="height:25px" src="assets/images/police_white.png" alt=""></i>
                         <h4 class="counter">21545</h4>
                         <p>Tjeneste menn og kvinner</p></span>
                     </div>
-                    <div class="col-sm-3 margin-b-20 text-center">
+                    <div class="col-sm-4 margin-b-20 text-center">
                         <i> <img style="height:25px" src="assets/images/police_badge-1_white.png" alt=""></i>
                         <h4 class="counter">13</h4>
                         <p>Politidistrikt</p>
                     </div>
-                    <div class="col-sm-3 margin-b-20 text-center">
+                    <!--div class="col-sm-3 margin-b-20 text-center">
                         <i class="tellere ion-locked"></i>
                         <h4 class="counter">242</h4>
                         <p>Soningsplasser i Nerderland</p>
-                    </div>
-                    <div class="col-sm-3 margin-b-20 text-center">
+                    </div-->
+                    <div class="col-sm-4 margin-b-20 text-center">
                         <i class="tellere ion-locked"></i>
                         <h4 class="counter">12345</h4>
                         <p>Soningsplasser i Norge</p>
@@ -394,9 +394,9 @@
                   <div class="space-80"></div>
                   <h2>Kontakt</h2>
                   <p class="lead">
-                      Besøksadresse: Mariboes gate 4, 0183 Oslo</br>
+                      Adresse: Kjelsåsveien 5C, 0488 Oslo</br>
                       Epost: post@lovogorden.no</br>
-                      Telefon: 95 05 31 97
+                      Telefon: 
                   </p>
               </div>
           </div>
@@ -436,12 +436,8 @@
               </div>
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-3 margin-b-40">
-                        <p><img style="height:60px" src="assets/images/BizSpark.png" alt=""></p>
-                    </div>
 
-
-                    <div class="col-sm-6 col-md-3 margin-b-40">
+                    <div class="col-md-offset-3 col-sm-6 col-md-3 margin-b-40">
                       <p><img style="height:40px" src="assets/advhasle-logo-v3-300x52.png" alt=""></p>
                     </div>
 
@@ -481,7 +477,7 @@
               </div>
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-3 margin-b-40">
+                    <div class="col-md-offset-3 col-sm-6 col-md-3 margin-b-40">
                         <p><img style="height:40px" src="assets/images/Office_365_logo.png" alt=""></p>
                     </div>
 
@@ -622,10 +618,12 @@
 
         <script>
           function initMap() {
-            var mariboesgate = {lat: 59.916217, lng: 10.749987};
+            
+            //var mariboesgate = {lat: 59.916217,  lng: 10.749987};
+            var kjelsasveien = {lat: 59.942446, lng: 10.782207};
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 13,
-              center: mariboesgate,
+              center: kjelsasveien,
               scrollwheel:  false,
               draggable: false,
               styles:
@@ -973,7 +971,8 @@
             var loicon = 'https://lovogorden.no/assets/LO-48.png';
 
             var marker = new google.maps.Marker({
-              position: {lat: 59.916217, lng: 10.749987},
+                // mariboesgate position: {lat: 59.916217, lng: 10.749987},
+                position: {lat: 59.942446, lng: 10.782207},
               icon: loicon,
               map: map
             });
