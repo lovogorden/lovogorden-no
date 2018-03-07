@@ -44,7 +44,7 @@ app.use('/assets', express.static('static/assets/'))
 ////NB Virker ikke: https://www.lovogorden.no/
 ////Redirects (in use clause)
 /////////////// COMMENT OUT FOR DEBUG - START ///////////////
-/*
+
 app.use (function (req, res, next) {
   var schema = (req.headers['x-forwarded-proto'] || '').toLowerCase();
 
@@ -60,7 +60,7 @@ app.use (function (req, res, next) {
     //next();
   }
 });
-*/
+
 /////////////// COMMENT OUT FOR DEBUG - END  ///////////////
 
 
