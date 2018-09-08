@@ -39,5 +39,5 @@ pm2 kill lovogorden-no
 pm2 delete lovogorden-no
 
 # config
-pm2 start pm2.config.js --env dev
-pm2 start pm2.config.js --env prod
+pm2 start pm2.config --env dev
+pm2 start pm2.config --env prod
