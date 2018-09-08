@@ -1,7 +1,7 @@
 module.exports = {
     apps : [
         {
-          name: "advhasle-no",
+          name: "lovogorden-no",
           script: "./app.js",
           watch: true,
           env: {
