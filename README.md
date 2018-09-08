@@ -1,13 +1,43 @@
-# Simple Hello World Node.js sample for Google App Engine
+# git
+git fetch origin
+git checkout master
+git merge origin/master
 
-This sample demonstrates a tiny Hello World Node.js app for [Google App Engine Flexible Environment](https://cloud.google.com/appengine).
+# Install
+npm i
 
-## Running locally
+# Run
+npm start
+
+# certbot (doesnt work one hour after dns change)
+certbot certonly --dry-run
+certbot --nginx certonly --dry-run
+certbot
+
+certbot --authenticator standalone
+certbot certonly --standalone
 
 
-## Deploy
-gcloud projects list
+# pm2
+pm2 start app.js -i 0 --name "advhasle-no"
+pm2 restart advhasle-no
+pm2 stop advhasle-no
 
-gcloud auth login
-gcloud config set project lovogorden-no
-gcloud app deploy
+
+# Log
+pm2 logs
+pm2 logs api
+
+# list all
+pm2 status
+
+# kill
+pm2 kill advhasle-no
+
+# delete 
+pm2 delete advhasle-no
+
+
+# config
+pm2 start app.pm2.config.js --env dev
+pm2 start app.pm2.config.js --env prod
