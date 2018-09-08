@@ -3,6 +3,9 @@ git fetch origin
 git checkout master
 git merge origin/master
 
+## git - get node branch
+git pull origin node
+
 # Install
 npm i
 
@@ -17,12 +20,10 @@ certbot
 certbot --authenticator standalone
 certbot certonly --standalone
 
-
 # pm2
-pm2 start app.js -i 0 --name "advhasle-no"
-pm2 restart advhasle-no
-pm2 stop advhasle-no
-
+pm2 start app.js -i 0 --name "lovogorden-no"
+pm2 restart lovogorden-no
+pm2 stop lovogorden-no
 
 # Log
 pm2 logs
@@ -32,12 +33,11 @@ pm2 logs api
 pm2 status
 
 # kill
-pm2 kill advhasle-no
+pm2 kill lovogorden-no
 
 # delete 
-pm2 delete advhasle-no
-
+pm2 delete lovogorden-no
 
 # config
-pm2 start app.pm2.config.js --env dev
-pm2 start app.pm2.config.js --env prod
+pm2 start pm2.config.js --env dev
+pm2 start pm2.config.js --env prod
