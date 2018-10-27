@@ -6,11 +6,16 @@ git merge origin/master
 ## git - get node branch
 git pull origin node
 
+# Get latest on server
+git branch --set-upstream-to=origin/node
+git pull
+
 # Install
 npm i
 
 # Run
 npm start
+nodemon ./app.js localhost 5000
 
 # certbot (doesnt work one hour after dns change)
 certbot certonly --dry-run
