@@ -6,6 +6,12 @@ git merge origin/master
 ## git - get node branch
 git pull origin node
 
+## merge testbranch into master
+git checkout master
+git pull origin master
+git merge testbranch
+git push origin master
+
 # Get latest on server
 git branch --set-upstream-to=origin/node
 git pull
