@@ -21,7 +21,7 @@ npm i
 
 # Run
 npm start
-nodemon ./app.js localhost 5000
+nodemon ./app.js localhost 4000
 
 # certbot (doesnt work one hour after dns change)
 certbot certonly --dry-run
@@ -50,5 +50,5 @@ pm2 kill lovogorden-no
 pm2 delete lovogorden-no
 
 # config
-pm2 start pm2.config.js --env dev
-pm2 start pm2.config.js --env prod
+pm2 start pm2.config.json 
+pm2 start pm2.config.json --env production

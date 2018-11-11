@@ -13,7 +13,7 @@ var nodemailer = require('nodemailer');
 app.use('/', express.static('static'))
 
 // Start the server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
   console.log('Press Ctrl+C to quit.');
